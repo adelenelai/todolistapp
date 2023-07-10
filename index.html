@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="./_app/immutable/assets/2.f0f4ad9f.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.eb19cadd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.e108d1fd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.29ce49f9.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.27c746dd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.6c7ce909.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.322dae39.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.3aa03483.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">  <h1 data-svelte-h="svelte-jbj03t">To Do List App</h1> <p data-svelte-h="svelte-1q6z6ue">Here&#39;s a simple app for making a To Do List!</p> <main><input value="YOUR_NAME"> <h1>This is YOUR_NAME&#39;s To Do List!</h1> <p data-svelte-h="svelte-m73tgv">This text is to help Adelene learn about importing components.</p> <div class="svelte-1vebx6v"><input type="checkbox"> <input placeholder="add something here" value="laundry"> </div><div class="svelte-1vebx6v"><input type="checkbox"> <input placeholder="add something here" value="fix bike"> </div><div class="svelte-1vebx6v"><input type="checkbox"> <input placeholder="add something here" value="troll more"> </div> <p>3 remaining</p> <button data-svelte-h="svelte-1gfr2zo">Add new</button> <button data-svelte-h="svelte-uirlp">Clear completed </button> </main> 
+			
+			<script>
+				{
+					__sveltekit_o3eeai = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.eb19cadd.js"),
+						import("./_app/immutable/entry/app.27c746dd.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
