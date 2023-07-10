@@ -1,24 +1,37 @@
 <script>
-    let itemtodo = "laundry";
-    // let count = 0;
+    let itemstodo = [
+        { done: false, text: "laundry" },
+        { done: false, text: "fix bike" },
+        { done: false, text: "troll more" },
+    ];
 
-    // function incrementCount() {
-    // 	// event handler code goes here
-    // }
+    function add() {
+        itemstodo = itemstodo.concat({ done: false, text: "" });
+    }
+
+    function clear() {
+        itemstodo = itemstodo.filter((t) => t.done).length;
+    }
+
+    $: remaining = itemstodo.filter((t) => !t.done).length;
 </script>
 
-<input value={itemtodo} />
+{#each itemstodo as itemtodo}
+    <div class:done={itemtodo.done}>
+        <input type="checkbox" bind:checked={itemtodo.done} />
 
-<h1>Stuff to do:</h1>
-<h3>{itemtodo}</h3>
+        <input placeholder="add something here" bind:value={itemtodo.text} />
+    </div>
+{/each}
 
-<!-- <button>
-	Clicked {count}
-	{count === 1 ? 'time' : 'times'}
-</button> -->
+<p>{remaining} remaining</p>
 
-<!-- <style>
-	button {
-		width:200px;
-	}
-</style> -->
+<button on:click={add}> Add new </button>
+
+<button on:click={clear}> Clear completed </button>
+
+<style>
+    .done {
+        opacity: 0.4;
+    }
+</style>
