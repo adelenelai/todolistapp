@@ -15,5 +15,8 @@
     <ToDo />
 </main>
 
-<style>
+<style lang="postcss">
+    :global(html) {
+        background-color: theme(colors.green.100);
+    }
 </style>
