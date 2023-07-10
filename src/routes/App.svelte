@@ -1,6 +1,6 @@
 <script>
-    import Text from "./Text.svelte";
-    import ToDo from "./ToDo.svelte";
+    import Text from "../components/Text.svelte";
+    import ToDo from "../components/ToDo.svelte";
     export let name = "YOUR_NAME";
     new todo = new ToDo({
         // some code here
